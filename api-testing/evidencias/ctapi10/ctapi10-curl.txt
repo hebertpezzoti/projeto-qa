@@ -1,0 +1,13 @@
+ curl --location 'https://restful-booker.herokuapp.com/booking' \
+--header 'Content-Type: application/json' \
+--data '{
+    "firstname": "João",
+    "lastname": "Silva",
+    "totalprice": 150,
+    "depositpaid": true,
+    "bookingdates": {
+        "checkin": "2025-06-10",
+        "checkout": "2025-06-05"
+    },
+    "additionalneeds": "WiFi"
+}'

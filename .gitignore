@@ -1,0 +1,65 @@
+# Dependências Node.js
+node_modules/
+package-lock.json
+yarn.lock
+
+# Artefatos do Cypress
+cypress/downloads/
+cypress/fixtures/example.json
+
+# Evidências temporárias da API (mantém apenas os PNGs e curls originais, ignora temporários)
+api-testing/evidencias/**/*.tmp
+api-testing/evidencias/**/*.log
+api-testing/evidencias/**/*.bak
+
+# Relatórios e cobertura de teste
+*.xml
+*.trx
+coverage/
+.nyc_output/
+
+# Logs e arquivos temporários do sistema
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+*.tmp
+*.temp
+desktop.ini
+
+# Arquivos de ambiente e chaves
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+*.crt
+
+# IDEs
+.vscode/
+.idea/
+*.sublime-*
+*.sublime-workspace
+*.iml
+
+# Python (venv, bytecode)
+venv/
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Backups de planilhas (evita commit de arquivos temporários do Office)
+~$*.xlsx
+*.xlsx~
+*.xls~
+
+# Arquivos de configuração do Cypress que podem conter credenciais (se você usou)
+cypress.env.json
+cypress/config/local.json

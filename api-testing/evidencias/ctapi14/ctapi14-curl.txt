@@ -1,0 +1,5 @@
+ curl --location 'https://restful-booker.herokuapp.com/booking' \
+--header 'Content-Type: application/json' \
+--data '{
+    "firstname": "João",
+}'

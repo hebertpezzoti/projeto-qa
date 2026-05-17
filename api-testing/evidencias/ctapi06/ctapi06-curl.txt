@@ -1,0 +1,6 @@
+curl --location --request PATCH 'https://restful-booker.herokuapp.com/booking/1648' \
+--header 'Content-Type: application/json' \
+--header 'Cookie: token=1ee842ce70bdaac' \
+--data '{
+    "firstname": "Ana"
+}'

@@ -3,6 +3,9 @@ node_modules/
 package-lock.json
 yarn.lock
 
+# anotações
+*.txt
+
 # Artefatos do Cypress
 cypress/downloads/
 cypress/fixtures/example.json

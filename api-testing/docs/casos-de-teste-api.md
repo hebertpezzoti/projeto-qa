@@ -6,25 +6,25 @@
 
 | ID       | Caso de Teste                                    | Status     | Evidências                                    |
 |----------|--------------------------------------------------|------------|-----------------------------------------------|
-| CTAPI01  | Autenticação - Criar token (válido)              | ✅ Passou  | [PNG](./evidencias/ctapi01/ctapi01.png) / [curl](./evidencias/ctapi01/ctapi01-curl.txt) |
-| CTAPI02  | Autenticação - Credenciais inválidas             | ✅ Passou  | [PNG](./evidencias/ctapi02/ctapi02.png) / [curl](./evidencias/ctapi02/ctapi02-curl.txt) |
-| CTAPI03  | CRUD - Criar reserva                             | ❌ Falhou  | [PNG](./evidencias/ctapi03/ctapi03.png) / [curl](./evidencias/ctapi03/ctapi03-curl.txt) |
-| CTAPI04  | CRUD - Consultar reserva por ID                  | ✅ Passou  | [PNG](./evidencias/ctapi04/ctapi04.png) / [curl](./evidencias/ctapi04/ctapi04-curl.txt) |
-| CTAPI05  | CRUD - Atualizar reserva (PUT) - autenticado     | ✅ Passou  | [PNG](./evidencias/ctapi05/ctapi05.png) / [curl](./evidencias/ctapi05/ctapi05-curl.txt) |
-| CTAPI06  | CRUD - Atualizar parcialmente (PATCH)            | ✅ Passou  | [PNG](./evidencias/ctapi06/ctapi06.png) / [curl](./evidencias/ctapi06/ctapi06-curl.txt) |
-| CTAPI07  | CRUD - Deletar reserva (autenticado)             | ✅ Passou  | [PNG1](./evidencias/ctapi07/ctapi07%20-%20print%2001.png) / [PNG2](./evidencias/ctapi07/ctapi07%20-%20print%2002.png) / [curl](./evidencias/ctapi07/ctapi07-curl.txt) |
-| CTAPI08  | CRUD - Tentar deletar sem autenticação           | ✅ Passou  | [PNG](./evidencias/ctapi08/ctapi08.png) / [curl](./evidencias/ctapi08/ctapi08-curl.txt) |
-| CTAPI09  | Validação - Criar reserva faltando campo         | ❌ Falhou  | [PNG](./evidencias/ctapi09/ctapi09.png) / [curl](./evidencias/ctapi09/ctapi09-curl.txt) |
-| CTAPI10  | Validação - Checkin posterior a checkout         | ❌ Falhou  | [PNG](./evidencias/ctapi10/ctapi10.png) / [curl](./evidencias/ctapi10/ctapi10-curl.txt) |
-| CTAPI11  | Filtros - Buscar reservas por nome               | ✅ Passou  | [PNG1](./evidencias/ctapi11/ctapi11%20-%20print%2001.png) / [PNG2](./evidencias/ctapi11/ctapi11%20-%20print%2002.png) / [curl](./evidencias/ctapi11/ctapi11-curl.txt) |
-| CTAPI12  | Filtros - Buscar reservas por data (checkin)     | ❌ Falhou  | [PNG1](./evidencias/ctapi12/ctapi12%20-%20print%2001.png) / [PNG2](./evidencias/ctapi12/ctapi12%20-%20print%2002.png) / [curl](./evidencias/ctapi12/ctapi12-curl.txt) |
-| CTAPI13  | Erros - Buscar reserva com ID inexistente        | ✅ Passou  | [PNG](./evidencias/ctapi13/ctapi13.png) / [curl](./evidencias/ctapi13/ctapi13-curl.txt) |
-| CTAPI14  | Erros - Enviar JSON malformado                   | ✅ Passou  | [PNG](./evidencias/ctapi14/ctapi14.png) / [curl](./evidencias/ctapi14/ctapi14-curl.txt) |
-| CTAPI15  | Performance - Teste de carga em /booking         | ✅ Passou  | [PNG](./evidencias/ctapi15/ctapi15.png) |
-| CTAPI16  | Segurança - Injeção de SQL em parâmetro          | ✅ Passou  | [PNG](./evidencias/ctapi16/ctapi16.png) / [curl](./evidencias/ctapi16/ctapi16-curl.txt) |
-| CTAPI17  | Segurança - Tentativa de acesso sem token (PUT)  | ✅ Passou  | [PNG](./evidencias/ctapi17/ctapi17.png) / [curl](./evidencias/ctapi17/ctapi17-curl.txt) |
-| CTAPI18  | Automação via script - Execução da coleção via CLI | ✅ Passou | [PNG1](./evidencias/ctap18/ctapi18%20-%20print%2001.png) / [PNG2](./evidencias/ctap18/ctapi18%20-%20print%2002.png) / [Relatório](./evidencias/ctap18/QA_Teste_API-2026-05-15-18-03-43.html) |
-| CTAPI19  | Validação de schema da resposta (criar reserva)  | ✅ Passou  | [PNG](./evidencias/ctapi19/ctapi19.png) / [curl](./evidencias/ctapi19/ctapi19-curl.txt) |
+| CTAPI01  | Autenticação - Criar token (válido)              | ✅ Passou  | [PNG](/api-testing/evidencias/ctapi01/ctapi01.png) / [curl](/api-testing/evidencias/ctapi01/ctapi01-curl.txt) |
+| CTAPI02  | Autenticação - Credenciais inválidas             | ✅ Passou  | [PNG](/api-testing/evidencias/ctapi02/ctapi02.png) / [curl](/api-testing/evidencias/ctapi02/ctapi02-curl.txt) |
+| CTAPI03  | CRUD - Criar reserva                             | ❌ Falhou  | [PNG](/api-testing/evidencias/ctapi03/ctapi03.png) / [curl](/api-testing/evidencias/ctapi03/ctapi03-curl.txt) |
+| CTAPI04  | CRUD - Consultar reserva por ID                  | ✅ Passou  | [PNG](/api-testing/evidencias/ctapi04/ctapi04.png) / [curl](/api-testing/evidencias/ctapi04/ctapi04-curl.txt) |
+| CTAPI05  | CRUD - Atualizar reserva (PUT) - autenticado     | ✅ Passou  | [PNG](/api-testing/evidencias/ctapi05/ctapi05.png) / [curl](/api-testing/evidencias/ctapi05/ctapi05-curl.txt) |
+| CTAPI06  | CRUD - Atualizar parcialmente (PATCH)            | ✅ Passou  | [PNG](/api-testing/evidencias/ctapi06/ctapi06.png) / [curl](/api-testing/evidencias/ctapi06/ctapi06-curl.txt) |
+| CTAPI07  | CRUD - Deletar reserva (autenticado)             | ✅ Passou  | [PNG1](/api-testing/evidencias/ctapi07/ctapi07%20-%20print%2001.png) / [PNG2](/api-testing/evidencias/ctapi07/ctapi07%20-%20print%2002.png) / [curl](/api-testing/evidencias/ctapi07/ctapi07-curl.txt) |
+| CTAPI08  | CRUD - Tentar deletar sem autenticação           | ✅ Passou  | [PNG](/api-testing/evidencias/ctapi08/ctapi08.png) / [curl](/api-testing/evidencias/ctapi08/ctapi08-curl.txt) |
+| CTAPI09  | Validação - Criar reserva faltando campo         | ❌ Falhou  | [PNG](/api-testing/evidencias/ctapi09/ctapi09.png) / [curl](/api-testing/evidencias/ctapi09/ctapi09-curl.txt) |
+| CTAPI10  | Validação - Checkin posterior a checkout         | ❌ Falhou  | [PNG](/api-testing/evidencias/ctapi10/ctapi10.png) / [curl](/api-testing/evidencias/ctapi10/ctapi10-curl.txt) |
+| CTAPI11  | Filtros - Buscar reservas por nome               | ✅ Passou  | [PNG1](/api-testing/evidencias/ctapi11/ctapi11%20-%20print%2001.png) / [PNG2](/api-testing/evidencias/ctapi11/ctapi11%20-%20print%2002.png) / [curl](/api-testing/evidencias/ctapi11/ctapi11-curl.txt) |
+| CTAPI12  | Filtros - Buscar reservas por data (checkin)     | ❌ Falhou  | [PNG1](/api-testing/evidencias/ctapi12/ctapi12%20-%20print%2001.png) / [PNG2](/api-testing/evidencias/ctapi12/ctapi12%20-%20print%2002.png) / [curl](/api-testing/evidencias/ctapi12/ctapi12-curl.txt) |
+| CTAPI13  | Erros - Buscar reserva com ID inexistente        | ✅ Passou  | [PNG](/api-testing/evidencias/ctapi13/ctapi13.png) / [curl](/api-testing/evidencias/ctapi13/ctapi13-curl.txt) |
+| CTAPI14  | Erros - Enviar JSON malformado                   | ✅ Passou  | [PNG](/api-testing/evidencias/ctapi14/ctapi14.png) / [curl](/api-testing/evidencias/ctapi14/ctapi14-curl.txt) |
+| CTAPI15  | Performance - Teste de carga em /booking         | ✅ Passou  | [PNG](/api-testing/evidencias/ctapi15/ctapi15.png) |
+| CTAPI16  | Segurança - Injeção de SQL em parâmetro          | ✅ Passou  | [PNG](/api-testing/evidencias/ctapi16/ctapi16.png) / [curl](/api-testing/evidencias/ctapi16/ctapi16-curl.txt) |
+| CTAPI17  | Segurança - Tentativa de acesso sem token (PUT)  | ✅ Passou  | [PNG](/api-testing/evidencias/ctapi17/ctapi17.png) / [curl](/api-testing/evidencias/ctapi17/ctapi17-curl.txt) |
+| CTAPI18  | Automação via script - Execução da coleção via CLI | ✅ Passou | [PNG1](/api-testing/evidencias/ctap18/ctapi18%20-%20print%2001.png) / [PNG2](/api-testing/evidencias/ctap18/ctapi18%20-%20print%2002.png) / [Relatório](/api-testing/evidencias/ctap18/QA_Teste_API-2026-05-15-18-03-43.html) |
+| CTAPI19  | Validação de schema da resposta (criar reserva)  | ✅ Passou  | [PNG](/api-testing/evidencias/ctapi19/ctapi19.png) / [curl](/api-testing/evidencias/ctapi19/ctapi19-curl.txt) |
 
 ---
 
@@ -57,7 +57,7 @@
 
 - **Status Final:** ✅ Passou
 - **Resultado / Observações:** Nos conformes.
-- **Evidências:** [PNG](./evidencias/ctapi01/ctapi01.png) | [curl](./evidencias/ctapi01/ctapi01-curl.txt)
+- **Evidências:** [PNG](/api-testing/evidencias/ctapi01/ctapi01.png) | [curl](/api-testing/evidencias/ctapi01/ctapi01-curl.txt)
 
 ---
 
@@ -88,7 +88,7 @@
 
 - **Status Final:** ✅ Passou
 - **Resultado / Observações:** Nos conformes.
-- **Evidências:** [PNG](./evidencias/ctapi02/ctapi02.png) | [curl](./evidencias/ctapi02/ctapi02-curl.txt)
+- **Evidências:** [PNG](/api-testing/evidencias/ctapi02/ctapi02.png) | [curl](/api-testing/evidencias/ctapi02/ctapi02-curl.txt)
 
 ---
 
@@ -137,7 +137,7 @@
 
 - **Status Final:** ❌ Falhou
 - **Resultado / Observações:** Bug: A data de checkin retornada (2013-06-01) não é a mesma que foi enviada (2025-06-01).
-- **Evidências:** [PNG](./evidencias/ctapi03/ctapi03.png) | [curl](./evidencias/ctapi03/ctapi03-curl.txt)
+- **Evidências:** [PNG](/api-testing/evidencias/ctapi03/ctapi03.png) | [curl](/api-testing/evidencias/ctapi03/ctapi03-curl.txt)
 
 ---
 
@@ -167,7 +167,7 @@
 
 - **Status Final:** ✅ Passou
 - **Resultado / Observações:** Nos conformes. Observação: seria recomendado poder fazer esta ação apenas com token válido, mas conforme documentação da API não utiliza.
-- **Evidências:** [PNG](./evidencias/ctapi04/ctapi04.png) | [curl](./evidencias/ctapi04/ctapi04-curl.txt)
+- **Evidências:** [PNG](/api-testing/evidencias/ctapi04/ctapi04.png) | [curl](/api-testing/evidencias/ctapi04/ctapi04-curl.txt)
 
 ---
 
@@ -213,7 +213,7 @@
 
 - **Status Final:** ✅ Passou
 - **Resultado / Observações:** Nos conformes.
-- **Evidências:** [PNG](./evidencias/ctapi05/ctapi05.png) | [curl](./evidencias/ctapi05/ctapi05-curl.txt)
+- **Evidências:** [PNG](/api-testing/evidencias/ctapi05/ctapi05.png) | [curl](/api-testing/evidencias/ctapi05/ctapi05-curl.txt)
 
 ---
 
@@ -251,7 +251,7 @@
 
 - **Status Final:** ✅ Passou
 - **Resultado / Observações:** Nos conformes.
-- **Evidências:** [PNG](./evidencias/ctapi06/ctapi06.png) | [curl](./evidencias/ctapi06/ctapi06-curl.txt)
+- **Evidências:** [PNG](/api-testing/evidencias/ctapi06/ctapi06.png) | [curl](/api-testing/evidencias/ctapi06/ctapi06-curl.txt)
 
 ---
 
@@ -267,7 +267,7 @@
 - **Response Obtido (GET pós-deleção):** `Not Found` (404)
 - **Status Final:** ✅ Passou
 - **Resultado / Observações:** Nos conformes. Confirmado com consulta posterior.
-- **Evidências:** [PNG1](./evidencias/ctapi07/ctapi07%20-%20print%2001.png) | [PNG2](./evidencias/ctapi07/ctapi07%20-%20print%2002.png) | [curl](./evidencias/ctapi07/ctapi07-curl.txt) | [complemento](./evidencias/ctapi07/ctapi04-curl%20-%20complemento.txt)
+- **Evidências:** [PNG1](/api-testing/evidencias/ctapi07/ctapi07%20-%20print%2001.png) | [PNG2](/api-testing/evidencias/ctapi07/ctapi07%20-%20print%2002.png) | [curl](/api-testing/evidencias/ctapi07/ctapi07-curl.txt) | [complemento](/api-testing/evidencias/ctapi07/ctapi04-curl%20-%20complemento.txt)
 
 ---
 
@@ -282,7 +282,7 @@
 - **Response Obtido:** 403 Forbidden
 - **Status Final:** ✅ Passou
 - **Resultado / Observações:** Nos conformes.
-- **Evidências:** [PNG](./evidencias/ctapi08/ctapi08.png) | [curl](./evidencias/ctapi08/ctapi08-curl.txt)
+- **Evidências:** [PNG](/api-testing/evidencias/ctapi08/ctapi08.png) | [curl](/api-testing/evidencias/ctapi08/ctapi08-curl.txt)
 
 ---
 
@@ -311,7 +311,7 @@
 - **Response Obtido:** 500 Internal Server Error
 - **Status Final:** ❌ Falhou
 - **Resultado / Observações:** Bug: A API retornou 500 Internal Server Error quando deveria retornar 400 Bad Request.
-- **Evidências:** [PNG](./evidencias/ctapi09/ctapi09.png) | [curl](./evidencias/ctapi09/ctapi09-curl.txt)
+- **Evidências:** [PNG](/api-testing/evidencias/ctapi09/ctapi09.png) | [curl](/api-testing/evidencias/ctapi09/ctapi09-curl.txt)
 
 ---
 
@@ -342,7 +342,7 @@
 - **Response Obtido:** 200 OK (reserva criada indevidamente)
 - **Status Final:** ❌ Falhou
 - **Resultado / Observações:** Bug: A API retornou sucesso na criação de uma reserva com data de entrada maior que a data de saída. Deveria retornar erro.
-- **Evidências:** [PNG](./evidencias/ctapi10/ctapi10.png) | [curl](./evidencias/ctapi10/ctapi10-curl.txt)
+- **Evidências:** [PNG](/api-testing/evidencias/ctapi10/ctapi10.png) | [curl](/api-testing/evidencias/ctapi10/ctapi10-curl.txt)
 
 ---
 
@@ -366,7 +366,7 @@
 
 - **Status Final:** ✅ Passou
 - **Resultado / Observações:** Nos conformes.
-- **Evidências:** [PNG1](./evidencias/ctapi11/ctapi11%20-%20print%2001.png) | [PNG2](./evidencias/ctapi11/ctapi11%20-%20print%2002.png) | [curl](./evidencias/ctapi11/ctapi11-curl.txt) | [complemento](./evidencias/ctapi11/ctapi04-curl%20-%20complementar.txt)
+- **Evidências:** [PNG1](/api-testing/evidencias/ctapi11/ctapi11%20-%20print%2001.png) | [PNG2](/api-testing/evidencias/ctapi11/ctapi11%20-%20print%2002.png) | [curl](/api-testing/evidencias/ctapi11/ctapi11-curl.txt) | [complemento](/api-testing/evidencias/ctapi11/ctapi04-curl%20-%20complementar.txt)
 
 ---
 
@@ -399,7 +399,7 @@
 
 - **Status Final:** ❌ Falhou
 - **Resultado / Observações:** Bug: O filtro por data de check-in não funciona. A requisição retornou reservas que não correspondem à data informada (ex: ID 8 com checkin 2025-07-14).
-- **Evidências:** [PNG1](./evidencias/ctapi12/ctapi12%20-%20print%2001.png) | [PNG2](./evidencias/ctapi12/ctapi12%20-%20print%2002.png) | [curl](./evidencias/ctapi12/ctapi12-curl.txt) | [complemento](./evidencias/ctapi12/ctapi04-curl%20-%20complementar.txt)
+- **Evidências:** [PNG1](/api-testing/evidencias/ctapi12/ctapi12%20-%20print%2001.png) | [PNG2](/api-testing/evidencias/ctapi12/ctapi12%20-%20print%2002.png) | [curl](/api-testing/evidencias/ctapi12/ctapi12-curl.txt) | [complemento](/api-testing/evidencias/ctapi12/ctapi04-curl%20-%20complementar.txt)
 
 ---
 
@@ -414,7 +414,7 @@
 - **Response Obtido:** 404 Not Found
 - **Status Final:** ✅ Passou
 - **Resultado / Observações:** Nos conformes.
-- **Evidências:** [PNG](./evidencias/ctapi13/ctapi13.png) | [curl](./evidencias/ctapi13/ctapi13-curl.txt)
+- **Evidências:** [PNG](/api-testing/evidencias/ctapi13/ctapi13.png) | [curl](/api-testing/evidencias/ctapi13/ctapi13-curl.txt)
 
 ---
 
@@ -437,7 +437,7 @@
 - **Response Obtido:** 400 Bad Request
 - **Status Final:** ✅ Passou
 - **Resultado / Observações:** Nos conformes.
-- **Evidências:** [PNG](./evidencias/ctapi14/ctapi14.png) | [curl](./evidencias/ctapi14/ctapi14-curl.txt)
+- **Evidências:** [PNG](/api-testing/evidencias/ctapi14/ctapi14.png) | [curl](/api-testing/evidencias/ctapi14/ctapi14-curl.txt)
 
 ---
 
@@ -456,7 +456,7 @@
 - **Critérios:** Média < 500ms, P95 < 800ms, erro 0% → ✅ Atendidos
 - **Status Final:** ✅ Passou
 - **Resultado / Observações:** Nos conformes.
-- **Evidência:** [PNG](./evidencias/ctapi15/ctapi15.png)
+- **Evidência:** [PNG](/api-testing/evidencias/ctapi15/ctapi15.png)
 
 ---
 
@@ -471,7 +471,7 @@
 - **Response Obtido:** `[]` (array vazio)
 - **Status Final:** ✅ Passou
 - **Resultado / Observações:** Nos conformes (API trata como string normal).
-- **Evidências:** [PNG](./evidencias/ctapi16/ctapi16.png) | [curl](./evidencias/ctapi16/ctapi16-curl.txt)
+- **Evidências:** [PNG](/api-testing/evidencias/ctapi16/ctapi16.png) | [curl](/api-testing/evidencias/ctapi16/ctapi16-curl.txt)
 
 ---
 
@@ -494,7 +494,7 @@
 - **Response Obtido:** 403 Forbidden
 - **Status Final:** ✅ Passou
 - **Resultado / Observações:** Nos conformes.
-- **Evidências:** [PNG](./evidencias/ctapi17/ctapi17.png) | [curl](./evidencias/ctapi17/ctapi17-curl.txt)
+- **Evidências:** [PNG](/api-testing/evidencias/ctapi17/ctapi17.png) | [curl](/api-testing/evidencias/ctapi17/ctapi17-curl.txt)
 
 ---
 
@@ -507,7 +507,7 @@
 - **Resultado Obtido:** Suite executada com sucesso, relatório gerado.
 - **Status Final:** ✅ Passou
 - **Resultado / Observações:** Nos conformes.
-- **Evidências:** [PNG1](./evidencias/ctap18/ctapi18%20-%20print%2001.png) | [PNG2](./evidencias/ctap18/ctapi18%20-%20print%2002.png) | [Relatório HTML](./evidencias/ctap18/QA_Teste_API-2026-05-15-18-03-43.html)
+- **Evidências:** [PNG1](/api-testing/evidencias/ctap18/ctapi18%20-%20print%2001.png) | [PNG2](/api-testing/evidencias/ctap18/ctapi18%20-%20print%2002.png) | [Relatório HTML](/api-testing/evidencias/ctap18/QA_Teste_API-2026-05-15-18-03-43.html)
 
 ---
 
@@ -538,7 +538,7 @@
 - **Response Obtido:** 200 OK, schema conforme esperado.
 - **Status Final:** ✅ Passou
 - **Resultado / Observações:** Nos conformes (validação de schema passou mesmo com a data inconsistente – validação estrutural apenas).
-- **Evidências:** [PNG](./evidencias/ctapi19/ctapi19.png) | [curl](./evidencias/ctapi19/ctapi19-curl.txt)
+- **Evidências:** [PNG](/api-testing/evidencias/ctapi19/ctapi19.png) | [curl](/api-testing/evidencias/ctapi19/ctapi19-curl.txt)
 
 ---
 

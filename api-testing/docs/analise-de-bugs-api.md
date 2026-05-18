@@ -39,7 +39,7 @@ Com base na execução dos casos de teste (conforme planilha), os seguintes bugs
   2. Observar o campo `booking.bookingdates.checkin` na resposta.
 - **Resultado esperado:** `checkin` deve ser `2025-06-01` (mesmo valor enviado).
 - **Resultado atual:** `checkin` é `2013-06-01`.
-- **Evidência:** [PNG](./evidencias/ctapi03/ctapi03.png) | [curl](./evidencias/ctapi03/ctapi03-curl.txt)
+- **Evidência:** [PNG](/api-testing/evidencias/ctapi03/ctapi03.png) | [curl](/api-testing/evidencias/ctapi03/ctapi03-curl.txt)
 
 ---
 
@@ -65,7 +65,7 @@ Com base na execução dos casos de teste (conforme planilha), os seguintes bugs
   2. Verificar o status code da resposta.
 - **Resultado esperado:** 400 Bad Request com mensagem indicando campo obrigatório ausente.
 - **Resultado atual:** 500 Internal Server Error.
-- **Evidência:** [PNG](./evidencias/ctapi09/ctapi09.png) | [curl](./evidencias/ctapi09/ctapi09-curl.txt)
+- **Evidência:** [PNG](/api-testing/evidencias/ctapi09/ctapi09.png) | [curl](/api-testing/evidencias/ctapi09/ctapi09-curl.txt)
 
 ---
 
@@ -93,7 +93,7 @@ Com base na execução dos casos de teste (conforme planilha), os seguintes bugs
   2. Verificar a resposta (status 200 e reserva criada).
 - **Resultado esperado:** 400 Bad Request, rejeitando a reserva por data inválida.
 - **Resultado atual:** 200 OK e a reserva é persistida com as datas inconsistentes.
-- **Evidência:** [PNG](./evidencias/ctapi10/ctapi10.png) | [curl](./evidencias/ctapi10/ctapi10-curl.txt)
+- **Evidência:** [PNG](/api-testing/evidencias/ctapi10/ctapi10.png) | [curl](/api-testing/evidencias/ctapi10/ctapi10-curl.txt)
 
 ---
 
@@ -108,7 +108,7 @@ Com base na execução dos casos de teste (conforme planilha), os seguintes bugs
   2. Examinar os `bookingid` retornados e consultar seus detalhes.
 - **Resultado esperado:** Retornar apenas reservas cujo `checkin` seja exatamente `2025-06-01` (ou nenhuma, se não houver).
 - **Resultado atual:** Retorna IDs como 8, 72, 292, 345, que possuem checkin em datas diferentes (ex.: ID 8 tem checkin 2025-07-14).
-- **Evidência:** [PNG1](./evidencias/ctapi12/ctapi12%20-%20print%2001.png) | [PNG2](./evidencias/ctapi12/ctapi12%20-%20print%2002.png) | [curl](./evidencias/ctapi12/ctapi12-curl.txt)
+- **Evidência:** [PNG1](/api-testing/evidencias/ctapi12/ctapi12%20-%20print%2001.png) | [PNG2](/api-testing/evidencias/ctapi12/ctapi12%20-%20print%2002.png) | [curl](/api-testing/evidencias/ctapi12/ctapi12-curl.txt)
 
 ---
 

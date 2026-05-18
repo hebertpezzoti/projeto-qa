@@ -32,7 +32,7 @@ O objetivo é demonstrar uma abordagem completa de **Qualidade de Software**, in
 
 ## Metodologia e diferenciais
 
-- **BDD** – cenários escritos em Dado/Quando/Então (`bdd-cenarios.md`)  
+- **BDD** – cenários escritos em Dado/Quando/Então (`02-bdd-cenarios.md`)  
 - **Mesmo cenário, duas abordagens** – cada caso funcional foi executado manualmente e depois automatizado  
 - **Evidências ricas** – GIFs animados, PNGs, vídeos MP4, arquivos curl, relatório HTML  
 - **Análises complementares** – bugs (severidade, reprodução), riscos (matriz), sugestões de melhoria acionáveis  
@@ -58,7 +58,7 @@ O objetivo é demonstrar uma abordagem completa de **Qualidade de Software**, in
 
 ## Como executar (resumo)
 
-- **Manuais** – siga os passos em `casos-de-teste.md` (dentro de `ui-testing/docs/` ou `api-testing/docs/`).  
+- **Manuais** – siga os passos em `03-casos-de-teste.md` (dentro de `ui-testing/docs/` ou `api-testing/docs/`).  
 - **Automação UI** – acesse `ui-testing/testes-automatizados/cypress/` e siga o `README.md` local (comandos completos de instalação e execução).  
 - **API** – importe a collection `api-testing/collection/QA_Teste_API.postman_collection.json` no Postman e execute as requisições.
 

@@ -50,7 +50,7 @@ Executar testes manuais no site **Sauce Demo** para validar os fluxos funcionais
 | CT09 | Teste Visual (Responsividade)           | ❌ Falhou    |
 | CT10 | Acessibilidade (Contraste de Tela)      | ❌ Falhou    |
 
-> O detalhamento completo (passo a passo, resultados esperados/obtidos, evidências) está no arquivo [`casos-de-teste.md`](./casos-de-teste.md).
+> O detalhamento completo (passo a passo, resultados esperados/obtidos, evidências) está no arquivo [`03-casos-de-teste.md`](./03-casos-de-teste.md).
 
 ## 6. Riscos e Problemas Identificados (com base nos resultados da planilha)
 | Problema                                 | Severidade | Observação (extraída da planilha)                           |

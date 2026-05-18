@@ -80,7 +80,7 @@ Executar testes manuais na API **Restful-Booker** para validar os fluxos de aute
 | CTAPI18  | Automação via script - Execução da coleção via CLI | ✅ Passou  |
 | CTAPI19  | Validação de schema da resposta (criar reserva)  | ✅ Passou    |
 
-> O detalhamento completo (passo a passo, resultados esperados/obtidos, evidências) está no arquivo [`casos-de-teste-api.md`](./casos-de-teste-api.md).
+> O detalhamento completo (passo a passo, resultados esperados/obtidos, evidências) está no arquivo [`03-03-casos-de-teste-api.md`](./03-03-casos-de-teste-api.md).
 
 ## 7. Riscos e Problemas Identificados
 

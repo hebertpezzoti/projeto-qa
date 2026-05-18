@@ -4,16 +4,16 @@
 
 | ID   | Caso de Teste                           | Status     | Evidência                                      |
 |------|-----------------------------------------|------------|------------------------------------------------|
-| CT01 | Login com Sucesso Standard User         | ✅ Passou  | [GIF](./evidencias/e2e/testes-manuais/ct01/ct01.gif) |
-| CT02 | Login de Usuário Bloqueado Locked Out   | ✅ Passou  | [GIF](./evidencias/e2e/testes-manuais/ct02/ct02.gif) |
-| CT03 | Login de Usuário Inexistente            | ✅ Passou  | [GIF](./evidencias/e2e/testes-manuais/ct03/ct03.gif) |
-| CT04 | Ordenação de Produtos A to Z e Z to A   | ❌ Falhou  | [GIF](./evidencias/e2e/testes-manuais/ct04/ct04.gif) + [PNG](./evidencias/e2e/testes-manuais/ct04/ct04.png) |
-| CT05 | Fluxo Completo de Compra                | ✅ Passou  | [GIF](./evidencias/e2e/testes-manuais/ct05/ct05.gif) |
-| CT06 | Remoção de Itens do Carrinho            | ❌ Falhou  | [GIF](./evidencias/e2e/testes-manuais/ct06/ct06.gif) |
-| CT07 | Navegação entre Páginas                 | ❌ Falhou  | [GIF](./evidencias/e2e/testes-manuais/ct07/ct07.gif) |
-| CT08 | Execução de Logout                      | ✅ Passou  | [GIF](./evidencias/e2e/testes-manuais/ct08/ct08.gif) |
-| CT09 | Teste Visual (Responsividade)           | ❌ Falhou  | [PNGs comparativos](./evidencias/e2e/testes-manuais/ct09/) |
-| CT10 | Acessibilidade (Contraste de Tela)      | ❌ Falhou  | [GIF](./evidencias/e2e/testes-manuais/ct10/ct10.gif) |
+| CT01 | Login com Sucesso Standard User         | ✅ Passou  | [GIF](/ui-testing/evidencias/e2e/testes-manuais/ct01/ct01.gif) |
+| CT02 | Login de Usuário Bloqueado Locked Out   | ✅ Passou  | [GIF](/ui-testing/evidencias/e2e/testes-manuais/ct02/ct02.gif) |
+| CT03 | Login de Usuário Inexistente            | ✅ Passou  | [GIF](/ui-testing/evidencias/e2e/testes-manuais/ct03/ct03.gif) |
+| CT04 | Ordenação de Produtos A to Z e Z to A   | ❌ Falhou  | [GIF](/ui-testing/evidencias/e2e/testes-manuais/ct04/ct04.gif) + [PNG](/ui-testing/evidencias/e2e/testes-manuais/ct04/ct04.png) |
+| CT05 | Fluxo Completo de Compra                | ✅ Passou  | [GIF](/ui-testing/evidencias/e2e/testes-manuais/ct05/ct05.gif) |
+| CT06 | Remoção de Itens do Carrinho            | ❌ Falhou  | [GIF](/ui-testing/evidencias/e2e/testes-manuais/ct06/ct06.gif) |
+| CT07 | Navegação entre Páginas                 | ❌ Falhou  | [GIF](/ui-testing/evidencias/e2e/testes-manuais/ct07/ct07.gif) |
+| CT08 | Execução de Logout                      | ✅ Passou  | [GIF](/ui-testing/evidencias/e2e/testes-manuais/ct08/ct08.gif) |
+| CT09 | Teste Visual (Responsividade)           | ❌ Falhou  | [PNGs comparativos](/ui-testing/evidencias/e2e/testes-manuais/ct09/) |
+| CT10 | Acessibilidade (Contraste de Tela)      | ❌ Falhou  | [GIF](/ui-testing/evidencias/e2e/testes-manuais/ct10/ct10.gif) |
 
 ---
 
@@ -32,7 +32,7 @@
 - **Resultado Esperado:** Acesso à página `/inventory.html` com sucesso.
 - **Resultado Obtido:** Login realizado com sucesso.
 - **Status:** ✅ Passou
-- **Evidência:** ![CT01](./evidencias/e2e/testes-manuais/ct01/ct01.gif)
+- **Evidência:** ![CT01](/ui-testing/evidencias/e2e/testes-manuais/ct01/ct01.gif)
 
 ---
 
@@ -49,7 +49,7 @@
 - **Resultado Esperado:** Não seja possível logar com usuário bloqueado e receba mensagem equivalente.
 - **Resultado Obtido:** Mensagem exibida: *"Epic sadface: Sorry, this user has been locked out."*
 - **Status:** ✅ Passou
-- **Evidência:** ![CT02](./evidencias/e2e/testes-manuais/ct02/ct02.gif)
+- **Evidência:** ![CT02](/ui-testing/evidencias/e2e/testes-manuais/ct02/ct02.gif)
 
 ---
 
@@ -66,7 +66,7 @@
 - **Resultado Esperado:** Não seja possível logar e receba mensagem equivalente.
 - **Resultado Obtido:** Mensagem exibida: *"Epic sadface: Username and password do not match any user in this service"*
 - **Status:** ✅ Passou
-- **Evidência:** ![CT03](./evidencias/e2e/testes-manuais/ct03/ct03.gif)
+- **Evidência:** ![CT03](/ui-testing/evidencias/e2e/testes-manuais/ct03/ct03.gif)
 
 ---
 
@@ -89,8 +89,8 @@
   - Imagens de produtos erradas (imagem de um cachorro em todos os produtos).
 - **Status:** ❌ Falhou
 - **Evidências:** 
-  - ![GIF CT04](./evidencias/e2e/testes-manuais/ct04/ct04.gif)
-  - ![PNG CT04](./evidencias/e2e/testes-manuais/ct04/ct04.png)
+  - ![GIF CT04](/ui-testing/evidencias/e2e/testes-manuais/ct04/ct04.gif)
+  - ![PNG CT04](/ui-testing/evidencias/e2e/testes-manuais/ct04/ct04.png)
 
 ---
 
@@ -113,7 +113,7 @@
 - **Resultado Esperado:** Seja possível realizar com sucesso todo o processo de compra de um produto.
 - **Resultado Obtido:** Sucesso no fluxo completo de compra de produto.
 - **Status:** ✅ Passou
-- **Evidência:** ![CT05](./evidencias/e2e/testes-manuais/ct05/ct05.gif)
+- **Evidência:** ![CT05](/ui-testing/evidencias/e2e/testes-manuais/ct05/ct05.gif)
 
 ---
 
@@ -130,7 +130,7 @@
 - **Resultado Esperado:** Item removido da lista e contador do carrinho atualizado.
 - **Resultado Obtido:** Ao clicar "Remove", o sistema não remove e apresenta erro nos logs.
 - **Status:** ❌ Falhou
-- **Evidência:** ![CT06](./evidencias/e2e/testes-manuais/ct06/ct06.gif)
+- **Evidência:** ![CT06](/ui-testing/evidencias/e2e/testes-manuais/ct06/ct06.gif)
 
 ---
 
@@ -148,7 +148,7 @@
 - **Resultado Esperado:** Redirecionamento para a página de produtos sem lentidão.
 - **Resultado Obtido:** Lentidão notável na navegação entre páginas.
 - **Status:** ❌ Falhou
-- **Evidência:** ![CT07](./evidencias/e2e/testes-manuais/ct07/ct07.gif)
+- **Evidência:** ![CT07](/ui-testing/evidencias/e2e/testes-manuais/ct07/ct07.gif)
 
 ---
 
@@ -167,7 +167,7 @@
 - **Resultado Esperado:** Retorno imediato à página inicial de login.
 - **Resultado Obtido:** Sistema permitiu deslogar conforme esperado.
 - **Status:** ✅ Passou
-- **Evidência:** ![CT08](./evidencias/e2e/testes-manuais/ct08/ct08.gif)
+- **Evidência:** ![CT08](/ui-testing/evidencias/e2e/testes-manuais/ct08/ct08.gif)
 
 ---
 
@@ -191,7 +191,7 @@
 - **Evidências (comparativos):**
   - Modelos positivos: `modelo positivo - problema visual 01.png`, `modelo positivo - problema visual 02.png`
   - Problemas encontrados: `problema visual 01.png`, `problema visual 02.png`
-  - Pasta completa: [`./evidencias/e2e/testes-manuais/ct09/`](./evidencias/e2e/testes-manuais/ct09/)
+  - Pasta completa: [`/ui-testing/evidencias/e2e/testes-manuais/ct09/`](/ui-testing/evidencias/e2e/testes-manuais/ct09/)
 
 ---
 
@@ -211,5 +211,5 @@
 - **Resultado Esperado:** Deva estar disponível opção de contraste visual.
 - **Resultado Obtido:** Opção de contraste de tela não foi encontrada.
 - **Status:** ❌ Falhou
-- **Evidência:** ![CT10](./evidencias/e2e/testes-manuais/ct10/ct10.gif)
+- **Evidência:** ![CT10](/ui-testing/evidencias/e2e/testes-manuais/ct10/ct10.gif)
 - **Recomendação:** Criar esta opção para que usuários com deficiência visual possam utilizar.

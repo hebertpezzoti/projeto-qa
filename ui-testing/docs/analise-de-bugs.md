@@ -80,7 +80,7 @@ Com base na execução dos casos de teste, os seguintes bugs foram identificados
 - **Resultado esperado:** Opção de contraste disponível e funcionando.
 - **Resultado atual:** Opção não encontrada.
 - **Recomendação da planilha:** Criar esta opção para que usuários com deficiência visual possam utilizar.
-- **Evidência:** [`ct10.gif`](/ui-testing/evidencias/e2e/testes-manuais/ct10/ct10.gif)
+- **Evidência:** [`ct10.png`](/ui-testing/evidencias/e2e/testes-manuais/ct10/ct10.png)
 
 ---
 

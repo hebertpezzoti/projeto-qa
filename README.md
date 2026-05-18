@@ -75,6 +75,6 @@ Todos os bugs estão documentados com evidências e sugestões de correção.
 
 ---
 
-**Autor:** Hebert Pezzoti  
+**Autor:** Hebert Pezzoti da Silva 
 **GitHub:** https://github.com/hebertpezzoti
 **Linkdin:** www.linkedin.com/in/hebertpezzoti

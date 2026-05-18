@@ -35,7 +35,7 @@ Com base na execução dos casos de teste, os seguintes bugs foram identificados
 - **Descrição:** Todos os produtos exibem a mesma imagem aleatória de um cachorro, em vez das imagens corretas.
 - **Resultado esperado:** Cada produto mostra sua respectiva imagem (ex.: mochila, lanterna, etc.).
 - **Resultado atual:** Imagem de cachorro em todos os produtos.
-- **Evidência:** [`ct04.png`](./evidencias/e2e/testes-manuais/ct04/ct04.png)
+- **Evidência:** [`ct04.png`](/ui-testing/evidencias/e2e/testes-manuais/ct04/ct04.png)
 
 ---
 
@@ -46,7 +46,7 @@ Com base na execução dos casos de teste, os seguintes bugs foram identificados
 - **Descrição:** Após adicionar um produto ao carrinho, o botão "Remove" não remove o item. O contador do carrinho permanece com o valor antigo e o item continua na lista. Erros visíveis no console (logs).
 - **Resultado esperado:** Item removido, contador atualizado (zerado ou sem badge).
 - **Resultado atual:** Nenhuma remoção ocorre; erro nos logs.
-- **Evidência:** [`ct06.gif`](./evidencias/e2e/testes-manuais/ct06/ct06.gif)
+- **Evidência:** [`ct06.gif`](/ui-testing/evidencias/e2e/testes-manuais/ct06/ct06.gif)
 
 ---
 
@@ -57,7 +57,7 @@ Com base na execução dos casos de teste, os seguintes bugs foram identificados
 - **Descrição:** Ao clicar em um produto e depois em "Back to products", há um atraso perceptível e incômodo no carregamento da página de produtos.
 - **Resultado esperado:** Redirecionamento rápido (sem lentidão perceptível).
 - **Resultado atual:** Lentidão notável ao voltar para a lista de produtos.
-- **Evidência:** [`ct07.gif`](./evidencias/e2e/testes-manuais/ct07/ct07.gif)
+- **Evidência:** [`ct07.gif`](/ui-testing/evidencias/e2e/testes-manuais/ct07/ct07.gif)
 
 ---
 
@@ -68,8 +68,8 @@ Com base na execução dos casos de teste, os seguintes bugs foram identificados
 - **Resultado esperado:** Elementos reorganizados de forma responsiva, alinhados e legíveis.
 - **Resultado atual:** Layout quebrado, elementos fora de posição.
 - **Evidências:** 
-  - Modelos positivos: [`modelo positivo - problema visual 01.png`](./evidencias/e2e/testes-manuais/ct09/modelo%20positivo%20-%20problema%20visual%2001.png) e [`modelo positivo - problema visual 02.png`](./evidencias/e2e/testes-manuais/ct09/modelo%20positivo%20-%20problema%20visual%2002.png)
-  - Problemas encontrados: [`problema visual 01.png`](./evidencias/e2e/testes-manuais/ct09/problema%20visual%2001.png) e [`problema visual 02.png`](./evidencias/e2e/testes-manuais/ct09/problema%20visual%2002.png)
+  - Modelos positivos: [`modelo positivo - problema visual 01.png`](/ui-testing/evidencias/e2e/testes-manuais/ct09/modelo%20positivo%20-%20problema%20visual%2001.png) e [`modelo positivo - problema visual 02.png`](/ui-testing/evidencias/e2e/testes-manuais/ct09/modelo%20positivo%20-%20problema%20visual%2002.png)
+  - Problemas encontrados: [`problema visual 01.png`](/ui-testing/evidencias/e2e/testes-manuais/ct09/problema%20visual%2001.png) e [`problema visual 02.png`](/ui-testing/evidencias/e2e/testes-manuais/ct09/problema%20visual%2002.png)
 
 ---
 
@@ -80,7 +80,7 @@ Com base na execução dos casos de teste, os seguintes bugs foram identificados
 - **Resultado esperado:** Opção de contraste disponível e funcionando.
 - **Resultado atual:** Opção não encontrada.
 - **Recomendação da planilha:** Criar esta opção para que usuários com deficiência visual possam utilizar.
-- **Evidência:** [`ct10.gif`](./evidencias/e2e/testes-manuais/ct10/ct10.gif)
+- **Evidência:** [`ct10.gif`](/ui-testing/evidencias/e2e/testes-manuais/ct10/ct10.gif)
 
 ---
 

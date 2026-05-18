@@ -24,7 +24,7 @@ Com base na execução dos casos de teste, os seguintes bugs foram identificados
 - **Descrição:** Ao selecionar os filtros "A to Z" ou "Z to A", a ordem dos produtos não se altera. Permanece na ordem padrão.
 - **Resultado esperado:** Produtos reorganizados conforme critério escolhido.
 - **Resultado atual:** Nenhuma alteração na ordem de exibição.
-- **Evidência:** [`ct04.gif`](/ui-testing/evidencias/e2e/testes-manuais/ct04)
+- **Evidência:** [`ct04.gif`](/ui-testing/evidencias/e2e/testes-manuais/ct04.gif)
 
 ---
 

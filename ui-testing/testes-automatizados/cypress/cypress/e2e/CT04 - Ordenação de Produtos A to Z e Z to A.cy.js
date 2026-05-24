@@ -3,7 +3,7 @@ describe('Ordenação de Produtos A to Z e Z to A', () => {
         // Realizando tarefa padrão
         cy.visit('https://www.saucedemo.com/');
 
-        // Lognado
+        // Logando
         cy.fixture('usuarios').then((usuarios) => {
             const user = usuarios.problem_user;
             cy.login(user.username, user.password);
@@ -13,14 +13,14 @@ describe('Ordenação de Produtos A to Z e Z to A', () => {
     it('Verificando ordens dos itens A-Z', () => {
 
         // Verificando ordens dos itens
-        // Selecioando ordem de A-Z
+        // Selecionando ordem de A-Z
         cy.validarOrdenacao('AZ');
     })
 
     it('Verificando ordens dos itens Z-A', () => {
 
         // Verificando ordens dos itens
-        // Selecioando ordem de Z-A
+        // Selecionando ordem de Z-A
         cy.validarOrdenacao('ZA');
     })
 

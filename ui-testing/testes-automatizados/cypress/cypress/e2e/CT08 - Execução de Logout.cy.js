@@ -3,7 +3,7 @@ describe('Execução de Logout', () => {
         // Acessando o Site Sauce Demo
         cy.visit('https://www.saucedemo.com/');
 
-        // Lognado
+        // Logando
         cy.fixture('usuarios').then((usuarios) => {
             const user = usuarios.standard_user;
             cy.login(user.username, user.password);
@@ -15,7 +15,7 @@ describe('Execução de Logout', () => {
         // Deslogando:
         cy.get('[data-test="logout-sidebar-link"]').should('be.visible').click();
 
-        // Verificando se fomos direcionado para a tela de login:
+        // Verificando se foi direcionados para a tela de login:
     cy.url().should('eq', 'https://www.saucedemo.com/');
     })
 });

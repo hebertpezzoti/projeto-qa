@@ -4,7 +4,7 @@ describe('Remoção de Itens do Carrinho', () => {
         // Acessando o Site Sauce Demo
         cy.visit('https://www.saucedemo.com/');
 
-        // Lognado
+        // Logando
         cy.fixture('usuarios').then((usuarios) => {
             const user = usuarios.error_user;
             cy.login(user.username, user.password);

@@ -11,7 +11,7 @@ describe('Login de Usuário Bloqueado Locked Out', () => {
             cy.get('[data-test="login-button"]').click();
         })
 
-        // Verificando se apresenta mensagem de negativa para o login
+        // Verificando se apresenta mensagem negativa para o login
         cy.get('[data-test="error"]').should('be.visible').and('contain', 'Epic sadface: Sorry, this user has been locked out.');
     })
 });

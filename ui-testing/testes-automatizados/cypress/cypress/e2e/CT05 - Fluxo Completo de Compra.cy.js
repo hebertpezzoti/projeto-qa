@@ -3,7 +3,7 @@ describe('Fluxo Completo de Compra', () => {
         // Acessando o Site Sauce Demo
         cy.visit('https://www.saucedemo.com/');
 
-        // Lognado
+        // Logando
         cy.fixture('usuarios').then((usuarios) => {
             const user = usuarios.standard_user;
             cy.login(user.username, user.password);
@@ -15,7 +15,7 @@ describe('Fluxo Completo de Compra', () => {
         // Abrindo carrinho:
         cy.get('[data-test="shopping-cart-link"]').should('be.visible').click();
 
-        // Verificando se o item escolhido esta no carrinho:
+        // Verificando se o item escolhido está no carrinho:
         cy.get('[data-test="inventory-item-name"]').should('be.visible');
 
         // Avançando:
@@ -29,7 +29,7 @@ describe('Fluxo Completo de Compra', () => {
         // Avançando:
         cy.get('[data-test="continue"]').should('be.visible').click();
 
-        // Verificando se o item escolhido esta aqui:
+        // Verificando se o item escolhido está aqui:
         cy.get('[data-test="inventory-item-name"]').should('be.visible');
 
         // Finalizando a compra:

@@ -1,4 +1,4 @@
-# 🖥️ UI Testing - Automação de Interface (Cypress & Robot Framework)
+# ️ UI Testing - Automação de Interface (Cypress & Robot Framework)
 
 ![Cypress](https://img.shields.io/badge/Cypress-E2E-blue)
 ![Robot Framework](https://img.shields.io/badge/Robot%20Framework-BDD-green)
@@ -12,6 +12,17 @@
 Este módulo contém a suíte de testes End-to-End (E2E) e de Interface para a aplicação **Sauce Demo**. A automação foi implementada utilizando duas stacks complementares para demonstrar versatilidade técnica: **Cypress** (focado em performance e integração moderna com Node.js) e **Robot Framework** (focado em BDD, legibilidade de negócios e evidências visuais ricas via Selenium).
 
 Ambos os frameworks foram configurados para gerar relatórios HTML ricos e autossuficientes, com screenshots e vídeos embutidos, além de manterem pastas organizadas com os arquivos de mídia brutos para auditoria detalhada.
+
+---
+
+## 🔗 Rastreabilidade e Documentação
+
+Os testes automatizados deste módulo não foram criados isoladamente. Eles são a implementação técnica direta dos cenários BDD documentados na pasta `documentation/` (Planilhas de Controle de Testes). 
+
+Isso garante que:
+- Cada script (`.cy.js` ou `.robot`) possui um Caso de Teste (CT) manual correspondente e validado.
+- As evidências de falhas ou sucessos estão vinculadas ao ID do caso de teste (ex: `CT01`, `CT05`).
+- A lógica de negócio foi validada manualmente antes de ser escalada via automação.
 
 ---
 
@@ -48,7 +59,7 @@ Ambos os frameworks foram configurados para gerar relatórios HTML ricos e autos
     │   │   ├── fixtures/         # Dados de teste
     │   │   ├── support/          # Comandos customizados e Page Objects
     │   │   ├── reports/          # Relatórios HTML gerados (Mochawesome)
-    │   │   ── cypress.config.js # Configuração avançada do runner
+    │   │   └── cypress.config.js # Configuração avançada do runner
     │   └── robot_framework/
     │       ├── testes/           # Casos de teste (.robot) em Gherkin
     │       ├── resources/        # Keywords e Page Objects
@@ -98,13 +109,13 @@ Ambos os frameworks foram configurados para gerar relatórios HTML ricos e autos
 
 ---
 
-## 📝 Nota sobre Documentação
+##  Nota sobre Documentação
 
 A lógica de negócios, criação dos casos de teste, automação e validação dos resultados foram desenvolvidas integralmente pelo autor. A estruturação, formatação e revisão textual desta documentação contaram com o auxílio de assistentes de IA, utilizados como ferramenta de produtividade para garantir clareza e padronização, sob total supervisão e curadoria técnica.
 
 ---
 
-## 👤 Sobre o Autor
+##  Sobre o Autor
 
 Desenvolvido por **Hebert Pezzoti da Silva**
 - **GitHub:** [github.com/hebertpezzoti](https://github.com/hebertpezzoti)

@@ -1,149 +1,111 @@
-# Testes Automatizados com Cypress – Sauce Demo
+# ⚡ Cypress E2E - Automação de Interface com JavaScript
 
-Este diretório contém os scripts de automação dos testes funcionais e de interface do site **Sauce Demo**, utilizando o framework **Cypress**. Os cenários automatizados são exatamente os mesmos 10 casos de teste definidos nos testes manuais (CT01 a CT10).
+![Cypress](https://img.shields.io/badge/Cypress-E2E-blue)
+![Node.js](https://img.shields.io/badge/Node.js-20.x_LTS-green)
+![Linux](https://img.shields.io/badge/Linux-Mint_22.3-yellow)
+![Mochawesome](https://img.shields.io/badge/Reporter-Mochawesome-orange)
 
-## 📌 Premissas
+## 📋 Sobre o Módulo
 
-- Os testes foram desenvolvidos com base nos casos de teste manuais (planilha de controle de testes).
-- Cada script automatizado corresponde a um CT (ex.: `CT01 - Login com Sucesso Standard User.cy.js`).
-- O ambiente alvo é a URL `https://www.saucedemo.com/`.
-- Os testes podem ser executados em modo headless (linha de comando) ou interativo (com navegador).
+Este módulo contém a suíte de testes End-to-End (E2E) implementada com **Cypress**, focada em performance, confiabilidade e integração moderna com o ecossistema Node.js. A automação foi desenvolvida para validar o fluxo completo da aplicação Sauce Demo, desde o login até a finalização de compras.
 
-## 🛠️ Ferramentas utilizadas
-
-- **Cypress** (versão 13+) – framework de testes end-to-end.
-- **Node.js** (versão 18+) – ambiente de execução.
-- **Mochawesome** – geração de relatórios HTML (via `cypress-mochawesome-reporter`).
-- **Git** – versionamento dos scripts e evidências.
-
-## 🔧 Preparação do ambiente (Linux)
-
-### 1. Python (ambiente virtual – opcional)
-
-Caso queira isolar dependências Python (alguns projetos utilizam), crie e ative um ambiente virtual:
-
-    sudo apt install python3-venv -y
-    cd ~/diretorio_aqui   # ajuste o caminho para seu projeto
-    python3 -m venv venv
-    source venv/bin/activate
-    # Para desativar depois: deactivate
-
-### 2. Instalar Node.js (versão LTS 20.x)
-
-Caso ainda não tenha Node.js instalado:
-
-    curl -fsSL https://deb.nodesource.com/setup_20.x | sudo bash -
-    sudo apt install -y nodejs
-
-Verifique as versões:
-
-    node -v
-    npm -v
-
-### 3. Instalar o Cypress e dependências
-
-No diretório do projeto de automação (ex.: `ui-testing/testes-automatizados/cypress/`), execute:
-
-    npm init -y               # cria package.json (se não existir)
-    npm install cypress --save-dev
-    npm install --save-dev cypress-mochawesome-reporter
-
-## 🔧 Preparação do ambiente (Windows)
-
-### 1. Instalar Node.js
-
-- Baixe o instalador LTS (versão 20.x) em [nodejs.org](https://nodejs.org/).
-- Execute o instalador e siga as instruções (marque a opção de adicionar ao PATH).
-- Abra o **Prompt de Comando** ou **PowerShell** e verifique:
-
-    node -v
-    npm -v
-
-### 2. Instalar o Cypress e dependências
-
-No diretório do projeto de automação, execute:
-
-    npm init -y
-    npm install cypress --save-dev
-    npm install --save-dev cypress-mochawesome-reporter
-
-## ▶️ Como executar os testes
-
-### Abrir o Cypress no modo interativo (com navegador)
-
-    npx cypress open
-
-### Executar todos os testes em modo headless (linha de comando)
-
-    npx cypress run
-
-- Os relatórios HTML (Mochawesome) serão gerados na pasta `cypress/reports/`.
-- Vídeos das execuções ficam em `cypress/videos/`.
-- Screenshots de falhas ficam em `cypress/screenshots/`.
-
-## 🧪 Estrutura dos testes
-
-Os scripts estão organizados na pasta `cypress/e2e/` e seguem a nomenclatura:
-
-    CT01 - Login com Sucesso Standard User.cy.js
-    CT02 - Login de Usuário Bloqueado Locked Out.cy.js
-    CT03 - Login de Usuário Inexistente.cy.js
-    CT04 - Ordenação de Produtos A to Z e Z to A.cy.js
-    CT05 - Fluxo Completo de Compra.cy.js
-    CT06 - Remoção de Itens do Carrinho.cy.js
-    CT07 - Navegação entre Páginas.cy.js
-    CT08 - Execução de Logout.cy.js
-    CT09 - Teste Visual.cy.js
-    CT10 - Acessibilidade.cy.js
-
-Cada script reproduz fielmente os passos descritos nos testes manuais, utilizando os mesmos dados de teste (`standard_user`, `locked_out_user`, `problem_user`, `performance_glitch_user`, `error_user` e `caramelo`).
-
-## 📊 Resultados da última execução (resumo)
-
-| Caso | Cenário                                 | Status (Automação) | Observação                                               |
-|------|-----------------------------------------|--------------------|----------------------------------------------------------|
-| CT01 | Login com sucesso                       | ✅ Passou          | Redirecionamento e validação OK                          |
-| CT02 | Login usuário bloqueado                 | ✅ Passou          | Mensagem de erro correta                                 |
-| CT03 | Login usuário inexistente               | ✅ Passou          | Mensagem de erro correta                                 |
-| CT04 | Ordenação de produtos (A-Z / Z-A)       | ❌ Falhou          | Mesmo bug do manual: ordenação não funciona + imagens erradas |
-| CT05 | Fluxo completo de compra                | ✅ Passou          | Checkout finalizado com sucesso                          |
-| CT06 | Remoção de itens do carrinho            | ❌ Falhou          | Bug reproduzido: botão "Remove" não funciona             |
-| CT07 | Navegação entre páginas                 | ❌ Falhou          | Lentidão notável (reproduzido)                           |
-| CT08 | Logout                                  | ✅ Passou          | Sessão encerrada corretamente                            |
-| CT09 | Teste visual (responsividade)           | ❌ Falhou          | Desalinhamento de elementos (reproduzido)                |
-| CT10 | Acessibilidade (contraste de tela)      | ❌ Falhou          | Opção de contraste não encontrada (reproduzido)          |
-
-> Vídeos das execuções podem ser encontrados em `cypress/videos/` e capturas de tela de falhas em `cypress/screenshots/`.
-
-## 🔁 Relação com os testes manuais
-
-- Todos os cenários falhos na automação **já haviam sido identificados nos testes manuais**, confirmando a consistência entre as duas abordagens.
-- A planilha de controle de testes manuais continua sendo a **fonte primária** dos passos e resultados detalhados.
-
-## 📁 Artefatos gerados
-
-| Tipo          | Local                                        |
-|---------------|----------------------------------------------|
-| Relatório HTML| `cypress/reports/`                           |
-| Vídeos        | `cypress/videos/`                            |
-| Screenshots   | `cypress/screenshots/`                       |
-| Código fonte  | `cypress/e2e/`                               |
-
-## 🧹 Limpeza de artefatos
-
-**Linux / macOS:**
-
-    rm -rf cypress/reports/* cypress/videos/* cypress/screenshots/*
-
-**Windows (PowerShell):**
-
-    Remove-Item -Recurse -Force cypress/reports/*, cypress/videos/*, cypress/screenshots/*
-
-## 📝 Observações finais
-
-- Os testes foram escritos e executados no ambiente **Linux Mint 22.3, Chromium 126**.
-- A automação utiliza os mesmos dados de teste e validações descritos nos casos manuais.
-- O relatório Mochawesome pode ser visualizado diretamente no navegador e anexado como evidência.
-- Para maiores detalhes sobre os cenários, consulte a documentação dos testes manuais em `ui-testing/docs/`.
+A arquitetura do projeto segue as melhores práticas idiomáticas do Cypress, utilizando **Custom Commands (Comandos Personalizados)** para abstrair a lógica de interação com o DOM e **Fixtures** para a gestão de dados de teste, garantindo máxima reutilização, legibilidade e manutenibilidade do código.
 
 ---
+
+## 🔗 Rastreabilidade e Documentação
+
+Os scripts de automação deste módulo são a implementação técnica direta dos cenários documentados na pasta `documentation/` (Planilha de Controle de Testes - Sauce Demo).
+
+Isso garante que:
+- Cada arquivo de teste (`.cy.js`) possui um Caso de Teste (CT) manual correspondente e validado (ex: `CT01` a `CT10`).
+- As evidências de falhas ou sucessos estão vinculadas ao ID do caso de teste.
+- A lógica de negócio foi validada manualmente antes de ser escalada via automação.
+
+---
+
+## 🛠️ Stack Tecnológica do Módulo
+
+### Frameworks e Bibliotecas
+- **Cypress:** Framework JavaScript para testes E2E rápidos e confiáveis.
+- **cypress-mochawesome-reporter:** Gerador de relatórios HTML avançados com assets embutidos.
+- **Node.js 20.x LTS:** Ambiente de execução e gestão de dependências via NPM.
+
+### Arquitetura e Metodologia
+- **Custom Commands e Fixtures:** Abstração de lógica de interação com o DOM e separação de dados de teste, seguindo as melhores práticas nativas do Cypress.
+- **Gestão de Artefatos:** Limpeza automática de assets antigos e captura automática de evidências em falhas.
+- **Execução Dual:** Suporte completo para modo GUI (Headed) e Headless.
+
+---
+
+## 🚀 Destaques de Engenharia
+
+- **Relatórios HTML Autossuficientes:** Configuração avançada do reporter com `inlineAssets: true` e `embeddedScreenshots: true`, gerando um único arquivo HTML com todos os screenshots e vídeos embutidos (sem dependência de arquivos externos).
+- **Configuração de Segurança e Performance:** Uso de `trashAssetsBeforeRuns: true` para manter o ambiente limpo e `allowCypressEnv: false` para gestão segura de variáveis.
+- **Fallback Automático de Erros:** `screenshotOnRunFailure: true` e `video: true` garantem que nenhuma falha passe sem evidência visual registrada.
+- **Estrutura Modular:** Organização clara entre casos de teste (`e2e/`), dados mockados (`fixtures/`) e comandos customizados (`support/`).
+
+---
+
+## 📁 Estrutura de Pastas
+
+    cypress/
+    ├── e2e/                  # Casos de teste (.cy.js) organizados por fluxo
+    ├── fixtures/             # Dados de teste (JSON) para mock e validação
+    ├── support/              # Comandos customizados e configurações globais
+    ├── reports/              # Relatórios HTML gerados (Mochawesome)
+    ├── videos/               # Gravações das execuções (Headless)
+    ├── screenshots/          # Capturas de tela em caso de falha
+    └── cypress.config.js     # Configuração avançada do runner e reporter
+
+---
+
+## ⚙️ Guia de Execução Rápida
+
+### Pré-requisitos
+- Node.js 20.x LTS e NPM instalados.
+- Navegador Chromium/Chrome configurado.
+
+### Instalação e Execução
+
+    # Navegar para a pasta do Cypress
+    cd ui-testing/testes-automatizados/cypress
+
+    # Instalar dependências
+    npm install
+
+    # Modo GUI (Headed) - Para desenvolvimento, debug e visualização em tempo real
+    npx cypress open
+
+    # Modo Headless - Para execução rápida, performance e CI/CD
+    npx cypress run
+
+*(Nota: Após a execução headless, o relatório HTML completo será gerado automaticamente na pasta `cypress/reports/`.)*
+
+---
+
+## 📸 Prévia Visual
+
+**Execução Headless (Exemplo de Output no Terminal):**
+
+    ✔  All specs passed!  (5 specs)
+    ✔  CT01 - Login com Sucesso
+    ✔  CT05 - Fluxo Completo de Compra
+    ...
+    (Relatório HTML gerado com sucesso em cypress/reports/)
+
+*Para evidências visuais completas, incluindo GIFs de execução e relatórios HTML interativos, consulte a pasta `ui-testing/evidencias/`.*
+
+---
+
+## 📝 Nota sobre Documentação
+
+A lógica de negócios, criação dos casos de teste, automação e validação dos resultados foram desenvolvidas integralmente pelo autor. A estruturação, formatação e revisão textual desta documentação contaram com o auxílio de assistentes de IA, utilizados como ferramenta de produtividade para garantir clareza e padronização, sob total supervisão e curadoria técnica.
+
+---
+
+## 👤 Sobre o Autor
+
+Desenvolvido por **Hebert Pezzoti da Silva**
+- **GitHub:** [github.com/hebertpezzoti](https://github.com/hebertpezzoti)
+- **LinkedIn:** [linkedin.com/in/hebertpezzoti](https://www.linkedin.com/in/hebertpezzoti)

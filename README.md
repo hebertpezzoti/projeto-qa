@@ -1,8 +1,8 @@
 # 🚀 Projeto de Portfólio QA - Demonstração de Competências Técnicas
 
 ![Status](https://img.shields.io/badge/Status-Concluído-success)
-![Cypress](https://img.shields.io/badge/Cypress-12.0+-blue)
-![Robot Framework](https://img.shields.io/badge/Robot%20Framework-7.0+-green)
+![Cypress](https://img.shields.io/badge/Cypress-E2E-blue)
+![Robot Framework](https://img.shields.io/badge/Robot%20Framework-BDD-green)
 ![Postman](https://img.shields.io/badge/Postman-Desktop%20%26%20CLI-orange)
 ![Linux](https://img.shields.io/badge/Linux-Mint_22.3-yellow)
 ![Node.js](https://img.shields.io/badge/Node.js-20.x_LTS-green)
@@ -25,7 +25,7 @@ Este portfólio foi desenhado para demonstrar domínio de todo o ciclo de vida d
 
 1. **Planejamento e Controle:** Elaboração de planos de teste, matrizes de risco e casos de teste detalhados (com abordagem BDD) documentados em planilhas estruturadas.
 2. **Execução Manual e Exploratória:** Testes funcionais, de usabilidade (UI/UX), responsividade e conscientização sobre acessibilidade (a11y), com registro técnico e evidenciado de bugs.
-3. **Automação Estratégica e Rastreável:** Implementação de suites E2E (Cypress, Robot Framework) e de API (Postman) desenvolvidas estritamente com base nos casos de teste manuais documentados, garantindo cobertura total, alinhamento com requisitos de negócio (BDD) e fácil manutenção (POM).
+3. **Automação Estratégica e Rastreável:** Implementação de suites E2E (Cypress, Robot Framework) e de API (Postman) desenvolvidas estritamente com base nos casos de teste manuais documentados, garantindo cobertura total, alinhamento com requisitos de negócio (BDD) e fácil manutenção.
 4. **Monitoramento e Evidências:** Geração de relatórios ricos (HTML com mídias embutidas), análise de métricas de performance (Throughput, P95) e rastreabilidade completa dos defeitos.
 
 ---
@@ -54,7 +54,8 @@ Isso garante que:
 - **Relatórios e Evidências:** Geração automática de relatórios HTML ricos em ambos os frameworks (com screenshots e vídeos embutidos via `cypress-mochawesome-reporter` e `robotframework-screencaplibrary`), além de pastas organizadas com arquivos de mídia brutos para auditoria detalhada.
 
 ### Arquitetura e Metodologia
-- **Page Object Model (POM):** Separação de seletores e lógica de página para manutenibilidade.
+- **Custom Commands e Fixtures (Cypress):** Abstração de lógica de interação com o DOM e separação de dados de teste, seguindo as melhores práticas nativas do Cypress.
+- **Page Object Model (Robot Framework):** Separação de seletores e lógica de página para manutenibilidade no Robot Framework.
 - **Behavior-Driven Development (BDD):** Uso da linguagem Gherkin (Dado/Quando/Então) para legibilidade de negócios.
 - **Isolamento de Dependências:** Virtual Environments (venv) e gestão segura de variáveis.
 
@@ -76,8 +77,8 @@ Isso garante que:
     projeto-qa/
     ├── ui-testing/                 # Testes de Interface (Cypress e Robot Framework)
     │   ├── testes-automatizados/
-    │   │   ├── cypress/            # Automação E2E com Cypress
-    │   │   └── robot_framework/    # Automação BDD com Robot + Selenium
+    │   │   ├── cypress/            # Automação E2E com Cypress (Custom Commands + Fixtures)
+    │   │   └── robot_framework/    # Automação BDD com Robot + Selenium (POM)
     │   └── evidencias/             # GIFs, prints e relatórios de UI
     ├── api-testing/                # Testes de API com Postman
     │   ├── collection/             # Coleção Postman exportada

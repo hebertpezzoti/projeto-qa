@@ -1,4 +1,4 @@
-# ️ UI Testing - Automação de Interface (Cypress & Robot Framework)
+# 🖥️ UI Testing - Automação de Interface (Cypress & Robot Framework)
 
 ![Cypress](https://img.shields.io/badge/Cypress-E2E-blue)
 ![Robot Framework](https://img.shields.io/badge/Robot%20Framework-BDD-green)
@@ -9,7 +9,7 @@
 
 ## 📋 Sobre o Módulo
 
-Este módulo contém a suíte de testes End-to-End (E2E) e de Interface para a aplicação **Sauce Demo**. A automação foi implementada utilizando duas stacks complementares para demonstrar versatilidade técnica: **Cypress** (focado em performance e integração moderna com Node.js) e **Robot Framework** (focado em BDD, legibilidade de negócios e evidências visuais ricas via Selenium).
+Este módulo contém a suíte de testes End-to-End (E2E) e de Interface para a aplicação **Sauce Demo**. A automação foi implementada utilizando duas stacks complementares para demonstrar versatilidade técnica: **Cypress** (focado em performance e integração moderna com Node.js, utilizando Custom Commands e Fixtures) e **Robot Framework** (focado em BDD, legibilidade de negócios e evidências visuais ricas via Selenium, utilizando Page Object Model).
 
 Ambos os frameworks foram configurados para gerar relatórios HTML ricos e autossuficientes, com screenshots e vídeos embutidos, além de manterem pastas organizadas com os arquivos de mídia brutos para auditoria detalhada.
 
@@ -35,7 +35,8 @@ Isso garante que:
 - **cypress-mochawesome-reporter:** Relatórios HTML avançados com assets embutidos.
 
 ### Arquitetura e Metodologia
-- **Page Object Model (POM):** Separação de seletores e lógica de página para manutenibilidade.
+- **Custom Commands e Fixtures (Cypress):** Abstração de lógica de interação com o DOM e separação de dados de teste, seguindo as melhores práticas nativas do Cypress.
+- **Page Object Model (Robot Framework):** Separação de seletores e lógica de página para manutenibilidade.
 - **Behavior-Driven Development (BDD):** Uso da linguagem Gherkin (Dado/Quando/Então) para legibilidade de negócios.
 - **Testes de Responsividade e Acessibilidade (a11y):** Cobertura além do funcional.
 
@@ -56,8 +57,8 @@ Isso garante que:
     ├── testes-automatizados/
     │   ├── cypress/
     │   │   ├── e2e/              # Casos de teste (.cy.js)
-    │   │   ├── fixtures/         # Dados de teste
-    │   │   ├── support/          # Comandos customizados e Page Objects
+    │   │   ├── fixtures/         # Dados de teste (JSON)
+    │   │   ├── support/          # Comandos customizados (Custom Commands)
     │   │   ├── reports/          # Relatórios HTML gerados (Mochawesome)
     │   │   └── cypress.config.js # Configuração avançada do runner
     │   └── robot_framework/
@@ -109,13 +110,13 @@ Isso garante que:
 
 ---
 
-##  Nota sobre Documentação
+## 📝 Nota sobre Documentação
 
 A lógica de negócios, criação dos casos de teste, automação e validação dos resultados foram desenvolvidas integralmente pelo autor. A estruturação, formatação e revisão textual desta documentação contaram com o auxílio de assistentes de IA, utilizados como ferramenta de produtividade para garantir clareza e padronização, sob total supervisão e curadoria técnica.
 
 ---
 
-##  Sobre o Autor
+## 👤 Sobre o Autor
 
 Desenvolvido por **Hebert Pezzoti da Silva**
 - **GitHub:** [github.com/hebertpezzoti](https://github.com/hebertpezzoti)

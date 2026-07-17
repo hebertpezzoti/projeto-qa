@@ -25,8 +25,19 @@ Este portfólio foi desenhado para demonstrar domínio de todo o ciclo de vida d
 
 1. **Planejamento e Controle:** Elaboração de planos de teste, matrizes de risco e casos de teste detalhados (com abordagem BDD) documentados em planilhas estruturadas.
 2. **Execução Manual e Exploratória:** Testes funcionais, de usabilidade (UI/UX), responsividade e conscientização sobre acessibilidade (a11y), com registro técnico e evidenciado de bugs.
-3. **Automação Estratégica:** Implementação de suites E2E (Cypress, Robot Framework) e de API (Postman) focadas em manutenibilidade (POM) e integração contínua.
+3. **Automação Estratégica e Rastreável:** Implementação de suites E2E (Cypress, Robot Framework) e de API (Postman) desenvolvidas estritamente com base nos casos de teste manuais documentados, garantindo cobertura total, alinhamento com requisitos de negócio (BDD) e fácil manutenção (POM).
 4. **Monitoramento e Evidências:** Geração de relatórios ricos (HTML com mídias embutidas), análise de métricas de performance (Throughput, P95) e rastreabilidade completa dos defeitos.
+
+---
+
+## 🔗 Rastreabilidade e Documentação
+
+Os testes automatizados deste projeto não foram criados isoladamente. Eles são a implementação técnica direta dos cenários BDD documentados na pasta `documentation/` (Planilhas de Controle de Testes). 
+
+Isso garante que:
+- Cada script (`.cy.js`, `.robot` ou Collection do Postman) possui um Caso de Teste (CT) manual correspondente e validado.
+- As evidências de falhas ou sucessos estão vinculadas ao ID do caso de teste (ex: `CT01`, `CTAPI05`).
+- A lógica de negócio foi validada manualmente antes de ser escalada via automação.
 
 ---
 

@@ -76,7 +76,7 @@ ui-testing/
 │       │   └── variables.robot            # Variáveis globais
 │       ├── tests/
 │       │   └── *.robot                    # Suites de teste BDD
-│       ├── results/                       # Relatórios e logs
+│       ├── results/                       # Evidências Relatórios e logs
 │       └── README.md
 │
 └── README.md                                # ← Você está aqui
@@ -195,7 +195,7 @@ A lógica de negócios, criação dos casos de teste, automação, execução ma
 
 ## 👤 Autoria
 
-**Hebert Pezzoti**  
+**Hebert Pezzoti da Silva**  
 🔗 [linkedin.com/in/hebertpezzoti](https://www.linkedin.com/in/hebertpezzoti)  
 📧 hebertpezzoti@hotmail.com
 

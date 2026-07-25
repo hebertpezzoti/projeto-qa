@@ -4,6 +4,8 @@
 
 Este módulo documenta **19 casos de teste** realizados na API pública [Restful-Booker](https://restful-booker.herokuapp.com/), abrangendo o ciclo completo de validação de serviços REST: desde o **planejamento e especificação BDD** até a **execução manual via Postman Desktop**, **automação via Postman CLI** e **análise de performance sob carga**.
 
+A abordagem é **híbrida**: a coleção `QA_Teste_API.postman_collection.json` contém requests que foram **executados e validados manualmente** no Postman Desktop (com prints documentados) e **cenários de regressão automatizados** executados via Postman CLI em modo headless. Isso garante cobertura tanto da validação perceptiva e exploratória quanto da execução contínua em pipelines.
+
 A abordagem cobre autenticação, CRUD de reservas, filtros, validação de schema, segurança e testes de performance, com evidências visuais (prints do Postman) e técnicas (comandos curl exportados) para cada cenário.
 
 ---
@@ -41,11 +43,11 @@ A abordagem cobre autenticação, CRUD de reservas, filtros, validação de sche
 | Camada | Ferramenta / Recurso | Função |
 |:---|:---|:---|
 | **Cliente API (GUI)** | Postman Desktop | Execução manual, inspeção de requests/responses, geração de coleções |
-| **Cliente API (CLI)** | Postman CLI | Automação headless de execução da coleção, integração com pipelines |
+| **Cliente API (CLI)** | Postman CLI | Automação headless dos cenários de regressão, integração com pipelines |
 | **Validação de Schema** | tv4 (JSON Schema Validation) | Validação estrutural automática das respostas JSON na coleção |
 | **Variáveis** | Coleção + Ambiente | Externalização de baseUrl, tokens e dados dinâmicos |
 | **Evidências** | PNG (prints Postman) + curl.txt | Documentação visual e técnica por caso de teste |
-| **Relatório CLI** | HTML gerado pelo Postman | Resumo executivo da execução automatizada |
+| **Relatório CLI** | HTML gerado pelo Postman | Resumo executivo da execução automatizada com métricas de performance |
 | **Ambiente** | Linux Mint 22.3 | Sistema operacional de execução |
 | **Metodologia** | BDD + Testes de Contrato | Especificação de cenários + validação de schema |
 
@@ -55,23 +57,23 @@ A abordagem cobre autenticação, CRUD de reservas, filtros, validação de sche
 
 ```
 api-testing/
-├── README.md                          # ← Você está aqui
+├── README.md                                    # ← Você está aqui
 ├── collection/
-│   └── QA_Teste_API.postman_collection.json   # Coleção completa com 19 CTs, tests scripts e schema validation
+│   └── QA_Teste_API.postman_collection.json     # Coleção híbrida: 19 CTs com tests scripts, schema validation e requests manuais + automatizados
 ├── docs/
-│   ├── 01-plano-de-testes-api.md      # Estratégia e escopo de testes da API
-│   ├── 02-bdd-cenarios-api.md         # Cenários BDD (CTAPI01–CTAPI19)
-│   ├── 03-casos-de-teste-api.md       # Detalhamento passo a passo
-│   ├── 04-analise-de-bugs-api.md      # 4 bugs documentados com severidade
-│   ├── 05-analise-de-riscos-api.md    # Matriz de riscos da API
-│   ├── 06-sugestoes-melhoria-api.md   # Sugestões de melhoria no serviço
-│   └── Planilha de Controle de Testes de API.xlsx   # Controle executivo
+│   ├── 01-plano-de-testes-api.md                # Estratégia e escopo de testes da API
+│   ├── 02-bdd-cenarios-api.md                   # Cenários BDD (CTAPI01–CTAPI19)
+│   ├── 03-casos-de-teste-api.md                 # Detalhamento passo a passo
+│   ├── 04-analise-de-bugs-api.md                # 4 bugs documentados com severidade
+│   ├── 05-analise-de-riscos-api.md              # Matriz de riscos da API
+│   ├── 06-sugestoes-melhoria-api.md             # Sugestões de melhoria no serviço
+│   └── Planilha de Controle de Testes de API.xlsx  # Controle executivo
 └── evidencias/
-    ├── ctapi01/ ... ctapi19/          # 19 pastas — uma por caso de teste
-    │   ├── ctapiXX.png                # Print do Postman com request/response
-    │   └── ctapiXX-curl.txt           # Comando curl equivalente exportado
+    ├── ctapi01/ ... ctapi19/                    # 19 pastas — uma por caso de teste
+    │   ├── ctapiXX.png                          # Print do Postman com request/response
+    │   └── ctapiXX-curl.txt                     # Comando curl equivalente exportado
     └── ctapi18/
-        └── QA_Teste_API-2026-05-15-18-03-43.html   # Relatório da execução CLI (performance)
+        └── QA_Teste_API-2026-05-15-18-03-43.html # Relatório da execução CLI (performance)
 ```
 
 ---
@@ -86,19 +88,26 @@ api-testing/
 
 ### Execução manual (Postman Desktop)
 
+Os **testes manuais** dos 19 casos de teste foram executados e validados individualmente no Postman Desktop:
+
 1. Importe a coleção: `collection/QA_Teste_API.postman_collection.json`
 2. Configure as variáveis de ambiente (`baseUrl`, `token`)
 3. Execute os requests individualmente ou a coleção completa via Collection Runner
+4. Valide os responses, status codes, headers e bodies conforme os critérios definidos nos docs
+
+> Os prints de cada execução manual estão documentados em `evidencias/ctapi01/` a `evidencias/ctapi19/`.
 
 ### Execução automatizada (Postman CLI)
+
+Os **cenários de regressão automatizados** da coleção são executados em modo headless via Postman CLI:
 
 ```bash
 cd api-testing/collection
 postman collection run QA_Teste_API.postman_collection.json
 ```
 
-- Executa todos os 19 CTs em modo headless
-- Gera relatório HTML com métricas de tempo, status e falhas
+- Executa os cenários de regressão automatizados em modo headless
+- Gera relatório HTML com métricas de tempo, status, falhas e throughput
 - Ideal para integração com pipelines de CI/CD
 
 ---
@@ -151,11 +160,11 @@ Cada resposta da API é validada automaticamente contra um schema JSON definido 
 ```javascript
 // Test script no Postman
 var schema = {
-    "required": ["bookingid", "booking"],
-    "properties": {
-        "bookingid": { "type": "integer" },
-        "booking": { "type": "object" }
-    }
+  "required": ["bookingid", "booking"],
+  "properties": {
+    "bookingid": { "type": "integer" },
+    "booking": { "type": "object" }
+  }
 };
 var valid = tv4.validate(pm.response.json(), schema);
 pm.expect(valid).to.be.true;
@@ -188,8 +197,8 @@ A lógica de negócios, criação dos casos de teste, automação e validação 
 
 ## 👤 Autoria
 
-**Hebert Pezzoti da Silva**  
-🔗 [linkedin.com/in/hebertpezzoti](https://www.linkedin.com/in/hebertpezzoti)  
+**Hebert Pezzoti da Silva**
+🔗 [linkedin.com/in/hebertpezzoti](https://www.linkedin.com/in/hebertpezzoti)
 📧 hebertpezzoti@hotmail.com
 
 ---

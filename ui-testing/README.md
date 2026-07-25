@@ -39,26 +39,16 @@ ui-testing/
 │
 ├── testes-manuais/                          # 10 CTs manuais com evidências visuais
 │   ├── README.md
-│   ├── ct01/
-│   │   └── ct01.gif
-│   ├── ct02/
-│   │   └── ct02.gif
-│   ├── ct03/
-│   │   └── ct03.gif
-│   ├── ct04/
-│   │   └── ct04.gif
-│   ├── ct05/
-│   │   └── ct05.gif
-│   ├── ct06/
-│   │   └── ct06.gif
-│   ├── ct07/
-│   │   └── ct07.gif
-│   ├── ct08/
-│   │   └── ct08.gif
-│   ├── ct09/
-│   │   └── ct09.png
-│   └── ct10/
-│       └── ct10.gif
+│   ├── ct01/ → ct01.gif
+│   ├── ct02/ → ct02.gif
+│   ├── ct03/ → ct03.gif
+│   ├── ct04/ → ct04.gif
+│   ├── ct05/ → ct05.gif
+│   ├── ct06/ → ct06.gif
+│   ├── ct07/ → ct07.gif
+│   ├── ct08/ → ct08.gif
+│   ├── ct09/ → ct09.png
+│   └── ct10/ → ct10.gif
 │
 ├── testes-automatizados/
 │   ├── cypress/                             # Projeto Cypress completo
@@ -76,7 +66,7 @@ ui-testing/
 │       │   └── variables.robot            # Variáveis globais
 │       ├── tests/
 │       │   └── *.robot                    # Suites de teste BDD
-│       ├── results/                       # Evidências Relatórios e logs
+│       ├── results/                       # Relatórios e logs
 │       └── README.md
 │
 └── README.md                                # ← Você está aqui
@@ -153,7 +143,7 @@ npx cypress open
 npx cypress run
 ```
 
-> Os relatórios, screenshots e videos gerados ficam em `cypress/screenshots/`, `cypress/videos/` e `cypress/reports/`.
+> Os relatórios HTML, screenshots e vídeos são gerados automaticamente. Além de estarem disponíveis soltos nas pastas (`cypress/screenshots/`, `cypress/videos/`, `cypress/reports/`), as evidências visuais (screenshots e vídeos) também ficam **anexadas/embedded nos próprios relatórios HTML**, permitindo navegação visual direta nos resultados de cada teste.
 
 ### Robot Framework
 
@@ -169,7 +159,7 @@ robot --outputdir results/ tests/
 robot --outputdir results/ tests/nome_da_suite.robot
 ```
 
-> Os relatórios `report.html` e `log.html` são gerados automaticamente dentro de `results/`.
+> Os relatórios HTML, screenshots e vídeos são gerados automaticamente em `results/`. Além de estarem disponíveis soltos nas pastas (`results/screenshots/`, `results/videos/`, `results/logs/`), as evidências visuais (screenshots e vídeos) também ficam **anexadas/embedded nos próprios relatórios HTML**, permitindo navegação visual direta nos resultados de cada teste.
 
 ---
 
@@ -195,8 +185,8 @@ A lógica de negócios, criação dos casos de teste, automação, execução ma
 
 ## 👤 Autoria
 
-**Hebert Pezzoti da Silva**  
-🔗 [linkedin.com/in/hebertpezzoti](https://www.linkedin.com/in/hebertpezzoti)  
+**Hebert Pezzoti da Silva**
+🔗 [linkedin.com/in/hebertpezzoti](https://www.linkedin.com/in/hebertpezzoti)
 📧 hebertpezzoti@hotmail.com
 
 *Este projeto é uma demonstração técnica de competências em Qualidade de Software. Todo o conteúdo de testes, evidências, automação e documentação foi produzido e validado pelo autor.*

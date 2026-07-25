@@ -14,16 +14,18 @@ Este documento apresenta os cenários de teste no formato **BDD (Behavior-Driven
 
 ## CT02 – Login de Usuário Bloqueado Locked Out
 
-**Dado** que estou na página de login  
-**Quando** insiro 'locked_out_user' e senha válida  
+**Dado** que estou na página de login
+**Quando** insiro 'locked_out_user'
+**E** senha valida.
 **Então** visualizo a mensagem de aviso de bloqueio.
 
 ---
 
 ## CT03 – Login de Usuário Inexistente
 
-**Dado** que estou na página de login  
-**Quando** insiro 'caramelo' e senha 'caramelo123'  
+**Dado** que estou na página de login
+**Quando** insiro 'caramelo'
+**E** senha 'caramelo123'.
 **Então** visualizo a mensagem de aviso de que o usuário/senha não foram encontrados.
 
 ---
@@ -54,8 +56,8 @@ Este documento apresenta os cenários de teste no formato **BDD (Behavior-Driven
 
 ## CT07 – Navegação entre Páginas
 
-**Dado** que estou na página de um produto  
-**Quando** clico em "Back to products"  
+**Dado** que estou na página de um produto
+**Quando** clico em "Back to products"
 **Então** sou direcionado para a página de produtos.
 
 ---
@@ -78,8 +80,8 @@ Este documento apresenta os cenários de teste no formato **BDD (Behavior-Driven
 
 ## CT10 – Acessibilidade
 
-**Dado** que estou logado na página de produtos  
-**Quando** clico no menu lateral ("Hambúrguer")  
+**Dado** que estou logado na página de produtos de produtos
+**Quando** eu clico no menu lateral ("Hamburguer")
 **Então** devo visualizar a opção de "Contraste de Tela" disponível na lista de itens do menu.
 
 ---

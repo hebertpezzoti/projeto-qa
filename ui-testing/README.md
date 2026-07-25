@@ -20,7 +20,7 @@ A abordagem é **híbrida e estratificada**: começa com testes manuais interati
 | **Navegador** | Chromium 126 |
 | **Ambiente de Execução** | Linux Mint 22.3 (execuções Headless e Headed) |
 | **Metodologia** | BDD (Behavior-Driven Development) |
-| **Evidências** | GIFs animados, PNGs comparativos, Videos, relatórios HTML/XML |
+| **Evidências** | GIFs animados, PNGs comparativos, Vídeos, relatórios HTML/XML |
 
 ---
 

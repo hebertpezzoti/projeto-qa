@@ -7,6 +7,7 @@
 [![Robot Framework](https://img.shields.io/badge/Robot%20Framework-000000?style=for-the-badge&logo=robot-framework&logoColor=white)](https://robotframework.org/)
 [![Selenium](https://img.shields.io/badge/Selenium-43B02A?style=for-the-badge&logo=selenium&logoColor=white)](https://www.selenium.dev/)
 [![Postman](https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white)](https://www.postman.com/)
+[![BDD/Gherkin](https://img.shields.io/badge/BDD%2FGherkin-23D96C?style=for-the-badge&logo=cucumber&logoColor=white)](https://cucumber.io/docs/bdd/)
 [![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)
 [![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
 [![Linux](https://img.shields.io/badge/Linux_Mint-87CF3E?style=for-the-badge&logo=linux&logoColor=black)](https://linuxmint.com/)
@@ -32,15 +33,15 @@ Os alvos de teste são:
 
 | Camada | Ferramentas / Tecnologias |
 |--------|---------------------------|
-| **Automação UI (JavaScript)** | Cypress — testes E2E com relatórios, screenshots e videos |
-| **Automação UI (Python)** | Robot Framework + SeleniumLibrary + BDD (Gherkin) — testes E2E com relatórios HTML/XML |
+| **Automação UI (JavaScript)** | Cypress — testes E2E com relatórios HTML, screenshots e vídeos |
+| **Automação UI (Python)** | Robot Framework + SeleniumLibrary + BDD (Gherkin) — testes E2E com relatórios HTML/XML, screenshots e vídeos |
 | **Testes de API (GUI + CLI)** | Postman Desktop + Postman CLI — execução manual e automação headless de coleções REST |
 | **Validação de Schema API** | tv4 (JSON Schema Validation) — validação estrutural automática das respostas JSON |
 | **Linguagens** | JavaScript, Python |
 | **Navegador** | Chromium 126 |
 | **Ambiente de Execução** | Linux Mint 22.3 (execuções Headless e Headed) |
 | **Metodologia** | BDD (Behavior-Driven Development) + Testes de Contrato |
-| **Evidências** | GIFs animados, vídeos, PNGs comparativos, screenshots, relatórios HTML/XML, prints Postman, comandos curl |
+| **Evidências** | GIFs animados, PNGs comparativos, screenshots, vídeos, relatórios HTML/XML, prints Postman, comandos curl |
 
 ---
 
@@ -170,7 +171,7 @@ npx cypress open
 npx cypress run
 ```
 
-> Evidências geradas automaticamente: `cypress/screenshots/`, `cypress/videos/`, `cypress/reports/`.
+> Os relatórios HTML, screenshots e vídeos são gerados automaticamente. Além de estarem disponíveis soltos nas pastas (`cypress/screenshots/`, `cypress/videos/`, `cypress/reports/`), as evidências visuais também ficam **anexadas/embedded nos próprios relatórios HTML**, permitindo navegação visual direta nos resultados de cada teste.
 
 ### 🤖 Robot Framework (UI)
 
@@ -184,18 +185,20 @@ robot --outputdir results/ tests/
 robot --outputdir results/ tests/nome_da_suite.robot
 ```
 
-> Relatórios gerados automaticamente: `results/report.html`, `results/log.html`, `results/output.xml`.
+> Os relatórios HTML, screenshots e vídeos são gerados automaticamente em `results/`. Além de estarem disponíveis soltos nas pastas (`results/screenshots/`, `results/videos/`, `results/logs/`), as evidências visuais também ficam **anexadas/embedded nos próprios relatórios HTML**, permitindo navegação visual direta nos resultados de cada teste.
 
 ### 📡 Postman CLI (API)
+
+A coleção `QA_Teste_API.postman_collection.json` contém **testes manuais** (executados e validados via Postman Desktop) e **cenários de regressão automatizados** (executados via Postman CLI). A execução automatizada headless roda os cenários de regressão:
 
 ```bash
 cd api-testing/collection
 
-# Execução automatizada headless da coleção completa (19 CTs)
+# Execução automatizada headless dos cenários de regressão
 postman collection run QA_Teste_API.postman_collection.json
 ```
 
-> Gera relatório HTML com métricas de tempo, status, falhas e throughput — ideal para integração com pipelines de CI/CD.
+> Gera relatório HTML com métricas de tempo, status, falhas e throughput — ideal para integração com pipelines de CI/CD. Os testes manuais foram executados individualmente no Postman Desktop e documentados com prints em `api-testing/evidencias/`.
 
 ---
 
@@ -245,7 +248,7 @@ A documentação é organizada em **dois núcleos independentes**, cada um com 6
 
 | Framework | Padrão / Técnica | Descrição |
 |-----------|-----------------|-----------|
-| **Cypress** | E2E Headless/Headed | Execução em modo visual e CI/CD com geração automática de screenshots, videos e relatórios HTML |
+| **Cypress** | E2E Headless/Headed | Execução em modo visual e CI/CD com geração automática de screenshots, vídeos e relatórios HTML |
 | **Cypress** | **Commands Customizados** | Comandos reutilizáveis em `support/commands.js` para abstração de ações repetitivas (login, navegação, asserções) |
 | **Cypress** | **Fixtures** | Massa de dados externalizada em arquivos JSON em `cypress/fixtures/`, permitindo reuso e manutenção centralizada |
 | **Robot Framework** | **BDD + Selenium** | Especificação Gherkin integrada à automação, com keywords customizadas, variáveis globais e relatórios HTML/XML |

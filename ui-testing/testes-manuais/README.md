@@ -39,29 +39,35 @@ A abordagem manual permite validar comportamentos que a automação não captura
 ```
 testes-manuais/
 ├── README.md                          # ← Você está aqui
-├── ct01/                              # Evidências do CT01
-│   └── ct01.gif
-├── ct02/
-│   └── ct02.gif
-├── ct03/
-│   └── ct03.gif
-├── ct04/
-│   └── ct04.gif
-├── ct05/
-│   └── ct05.gif
-├── ct06/
-│   └── ct06.gif
-├── ct07/
-│   └── ct07.gif
-├── ct08/
-│   └── ct08.gif
-├── ct09/                              # CT09 — múltiplos viewports
-│   └── ct09.png
-└── ct10/
-    └── ct10.gif
+└── evidencias/
+    └── e2e/
+        ├── ct01/                      # Evidências do CT01
+        │   └── ct01.gif
+        ├── ct02/
+        │   └── ct02.gif
+        ├── ct03/
+        │   └── ct03.gif
+        ├── ct04/
+        │   ├── ct04.gif
+        │   └── ct04.png
+        ├── ct05/
+        │   └── ct05.gif
+        ├── ct06/
+        │   └── ct06.gif
+        ├── ct07/
+        │   └── ct07.gif
+        ├── ct08/
+        │   └── ct08.gif
+        ├── ct09/                      # CT09 — múltiplos viewports (PNGs)
+        │   ├── problema visual 01.png
+        │   ├── problema visual 02.png
+        │   ├── modelo positivo - problema visual 01.png
+        │   └── modelo positivo - problema visual 02.png
+        └── ct10/
+            └── ct10.png
 ```
 
-> Cada pasta `ctXX/` contém a evidência visual correspondente ao caso de teste executado.
+> Cada pasta `evidencias/e2e/ctXX/` contém a evidência visual correspondente ao caso de teste executado.
 
 ## 🎬 Evidências Visuais
 
@@ -69,16 +75,16 @@ Este módulo utiliza **GIFs animados** para demonstrar a execução passo a pass
 
 | CT | Evidência | Tipo | Descrição |
 |---|---|---|---|
-| CT01 | [`ct01/ct01.gif`](ct01/ct01.gif) | GIF | Login bem-sucedido com standard_user |
-| CT02 | [`ct02/ct02.gif`](ct02/ct02.gif) | GIF | Tentativa de login com usuário bloqueado |
-| CT03 | [`ct03/ct03.gif`](ct03/ct03.gif) | GIF | Tentativa de login com credenciais inexistentes |
-| CT04 | [`ct04/ct04.gif`](ct04/ct04.gif) | GIF | Falha na ordenação de produtos |
-| CT05 | [`ct05/ct05.gif`](ct05/ct05.gif) | GIF | Fluxo completo de compra do início ao fim |
-| CT06 | [`ct06/ct06.gif`](ct06/ct06.gif) | GIF | Falha na remoção de itens do carrinho |
-| CT07 | [`ct07/ct07.gif`](ct07/ct07.gif) | GIF | Lentidão na navegação entre páginas |
-| CT08 | [`ct08/ct08.gif`](ct08/ct08.gif) | GIF | Execução de logout com sucesso |
-| CT09 | [`ct09/ct09.png`](ct09/ct09.png) | PNG | Comparação de layout em 4 resoluções diferentes |
-| CT10 | [`ct10/ct10.gif`](ct10/ct10.gif) | GIF | Falha de contraste em elementos da interface |
+| CT01 | [`evidencias/e2e/ct01/ct01.gif`](evidencias/e2e/ct01/ct01.gif) | GIF | Login bem-sucedido com standard_user |
+| CT02 | [`evidencias/e2e/ct02/ct02.gif`](evidencias/e2e/ct02/ct02.gif) | GIF | Tentativa de login com usuário bloqueado |
+| CT03 | [`evidencias/e2e/ct03/ct03.gif`](evidencias/e2e/ct03/ct03.gif) | GIF | Tentativa de login com credenciais inexistentes |
+| CT04 | [`evidencias/e2e/ct04/ct04.gif`](evidencias/e2e/ct04/ct04.gif) | GIF | Falha na ordenação de produtos |
+| CT05 | [`evidencias/e2e/ct05/ct05.gif`](evidencias/e2e/ct05/ct05.gif) | GIF | Fluxo completo de compra do início ao fim |
+| CT06 | [`evidencias/e2e/ct06/ct06.gif`](evidencias/e2e/ct06/ct06.gif) | GIF | Falha na remoção de itens do carrinho |
+| CT07 | [`evidencias/e2e/ct07/ct07.gif`](evidencias/e2e/ct07/ct07.gif) | GIF | Lentidão na navegação entre páginas |
+| CT08 | [`evidencias/e2e/ct08/ct08.gif`](evidencias/e2e/ct08/ct08.gif) | GIF | Execução de logout com sucesso |
+| CT09 | [`evidencias/e2e/ct09/`](evidencias/e2e/ct09/) | PNG | Comparação de layout em 4 resoluções diferentes (múltiplos arquivos) |
+| CT10 | [`evidencias/e2e/ct10/ct10.png`](evidencias/e2e/ct10/ct10.png) | PNG | Falha de contraste em elementos da interface |
 
 ## 🐛 Bugs Identificados
 

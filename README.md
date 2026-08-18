@@ -99,16 +99,18 @@ projeto-qa/
 │   │
 │   ├── testes-manuais/
 │   │   ├── README.md
-│   │   ├── ct01/ → ct01.gif
-│   │   ├── ct02/ → ct02.gif
-│   │   ├── ct03/ → ct03.gif
-│   │   ├── ct04/ → ct04.gif + ct04.png
-│   │   ├── ct05/ → ct05.gif
-│   │   ├── ct06/ → ct06.gif
-│   │   ├── ct07/ → ct07.gif
-│   │   ├── ct08/ → ct08.gif
-│   │   ├── ct09/ → PNGs comparativos
-│   │   └── ct10/ → ct10.gif
+│   │   └── evidencias/
+│   │       └── e2e/
+│   │           ├── ct01/ → ct01.gif
+│   │           ├── ct02/ → ct02.gif
+│   │           ├── ct03/ → ct03.gif
+│   │           ├── ct04/ → ct04.gif + ct04.png
+│   │           ├── ct05/ → ct05.gif
+│   │           ├── ct06/ → ct06.gif
+│   │           ├── ct07/ → ct07.gif
+│   │           ├── ct08/ → ct08.gif
+│   │           ├── ct09/ → múltiplos PNGs comparativos
+│   │           └── ct10/ → ct10.png
 │   │
 │   ├── testes-automatizados/
 │   │   ├── cypress/
